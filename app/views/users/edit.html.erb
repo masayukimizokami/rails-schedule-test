@@ -1,0 +1,36 @@
+<h3>スケジュール編集</h3>
+ 
+    <%= form_with model: @user do |f| %>
+       <table>
+      <tr>
+        <th><%= f.label :title,"タイトル" %></th>
+        <td><%= f.text_field :title %></td>
+      </tr> 
+      <tr>
+        <th><%= f.label :start_at,"開始日" %></th>
+        <td><%= f.date_field :start_at %></td>
+      </tr> 
+      <tr>
+        <th><%= f.label :end_at,"終了日" %></th>
+        <td><%= f.date_field :end_at %></td>
+      </tr> 
+      <tr>
+        <th><%= f.label :is_all_day,"終日" %></th>
+        <td>
+          <%= f.check_box 'is_all_day', {}, true, false %>
+          <%= label_tag :is_all_day, "終日の場合はチェックを入れて下さい" %>
+        </td>
+      </tr> 
+      <tr>
+        <th><%= f.label :post_memo,"スケジュールメモ" %></th>
+        <td><%= f.text_area :post_memo %></td>
+      </tr> 
+    </table>
+
+      <div>
+        <ul>
+          <li><%= f.submit "スケジュール編集を完了する" %></li>
+          <li><%= link_to "一覧に戻る", :users %></li>
+        </ul>
+      </div>
+    <% end %>
