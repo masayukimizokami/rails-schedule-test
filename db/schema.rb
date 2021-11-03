@@ -10,7 +10,20 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_10_29_223013) do
+ActiveRecord::Schema.define(version: 2021_10_31_202726) do
+
+  create_table "schedules", force: :cascade do |t|
+    t.string "title"
+    t.date "start_day"
+    t.date "end_day"
+    t.datetime "update_at"
+    t.string "memo"
+    t.boolean "all_day"
+    t.string "alert_succese"
+    t.string "alert_delete"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "name"

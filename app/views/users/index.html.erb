@@ -20,14 +20,14 @@
       </thead>
  
       <tbody>
-        <% @users.each do |user| %>
+        <% @users.each do |schedule| %>
           <tr>
-            <td><%= user.id %></td>
-            <td><%= user.title %></td>
-            <td><%= user.start_day %></td>
-            <td><%= user.end_day %></td>
-            <td><%= user.all_day %></td>
-            <td><%= user.updated_at.to_s(:datetime_jp) %></td>
+            <td><%= schedule.id %></td>
+            <td><%= schedule.title %></td>
+            <td><%= schedule.start_day %></td>
+            <td><%= schedule.end_day %></td>
+            <td><%= schedule.all_day %></td>
+            <td><%= schedule.updated_at.to_s(:datetime_jp) %></td>
             <td>
             <%= link_to "参照", user %>
             </td>
